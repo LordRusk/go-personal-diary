@@ -1,11 +1,10 @@
-package utils
+package main
 
 import (
 	"fyne.io/fyne"
-	"fyne.io/fyne/app"
 	"fyne.io/fyne/layout"
 	"fyne.io/fyne/widget"
-	"go_personal_diary/dao"
+	"github.com/lordrusk/godiary/dao"
 )
 
 var (
@@ -114,13 +113,4 @@ func LoadUI() fyne.CanvasObject {
 	splitLayout := widget.NewHSplitContainer(leftSide, rightSide)
 	splitLayout.Offset = layoutOffset
 	return splitLayout
-}
-
-// Initialize & run the app & window ...
-func InitAndRun() {
-	a = app.NewWithID(appId)
-	w := a.NewWindow(title)
-	w.SetContent(LoadUI())
-	w.Resize(fyne.NewSize(appWidth, appHeight))
-	w.ShowAndRun()
 }

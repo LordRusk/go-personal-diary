@@ -1,10 +1,10 @@
-package utils
+package main
 
 import (
 	"fyne.io/fyne"
 	"fyne.io/fyne/theme"
 	"fyne.io/fyne/widget"
-	"go_personal_diary/dao"
+	"github.com/lordrusk/godiary/dao"
 )
 
 // Set the current date as default date ...
